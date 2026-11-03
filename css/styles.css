@@ -58,7 +58,7 @@ img { max-width: 100%; display: block; }
 .container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: var(--space-2); }
 .section { padding-block: var(--space-5); }
 .section-alt { background-color: var(--color-surface); border-block: 1px solid var(--color-line); }
-.lead { color: var(--color-text-dim); font-size: 1.05rem; max-width: 52ch; }
+.lead { color: var(--color-text-dim); font-size: 1.05rem; }
 .eyebrow { display: inline-block; color: var(--color-gold); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: var(--space-2); }
 .section-head { text-align: center; margin-bottom: var(--space-4); }
 .section-head h1, .section-head h2 { margin: 0 0 var(--space-2); }
@@ -106,3 +106,81 @@ h3 {margin-top: 0; } .card .price { margin-top: var(--space-2); }
 .main-nav a[aria-current="page"], .main-nav a[aria-current="page"]:hover { color: var(--color-gold); background-color: rgba(212, 175, 55, 0.16); font-weight: 500; }
 
 .site-footer { padding-block: var(--space-4); text-align: center; color: var(--color-text-dim); font-size: 0.95rem; border-top: 1px solid var(--color-line); }
+
+/* ==========================================================================
+    Products Page — Specific Styles
+    ========================================================================== */
+
+/* Products Hero Section */
+.products-hero { padding-block: var(--space-3); background-color: transparent; }
+
+/* Products Grid Layout */
+#tier-grid { display: grid; gap: var(--space-4); }
+@media (min-width: 900px) {
+  #tier-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 899px) {
+  #tier-grid { grid-template-columns: 1fr; }
+}
+#tier-grid .card { padding: var(--space-3); }
+
+/* Tier Cards */
+.product-card { 
+  background-color: var(--color-surface-raised); 
+  border: 1px solid var(--color-line); 
+  border-radius: var(--radius); 
+  overflow: hidden; 
+  padding: var(--space-3);
+}
+.product-card.glow { background-color: var(--color-surface-raised); border: 1px solid var(--color-gold); }
+.product-card.premium { background-color: var(--color-surface); border: 2px solid var(--color-gold); }
+.price { color: var(--color-gold); font-weight: 600; font-size: clamp(1.5rem, 4vw, 2rem); }
+.fps{
+  font-size: clamp(0.75rem, 2vw, 1rem) !important;
+}
+
+/* Table Styling within Cards */
+.product-specs table { width: 100%; border-collapse: collapse; margin-top: var(--space-3); }
+.product-specs th { padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem; }
+.product-specs td { padding: var(--space-1) var(--space-2); }
+
+/* Gameplay Section */
+.gameplay-section { margin-top: var(--space-3); }
+.gameplay-list { list-style: none; margin-top: var(--space-2); padding-left: 0; }
+.gameplay-list li { padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line); }
+
+/* Product Notes */
+.product-note { background-color: rgba(212, 175, 55, 0.1); border-left: 3px solid var(--color-gold); padding: var(--space-2); margin-top: var(--space-3); font-size: 0.9rem; margin-inline: 0; }
+.product-note p { margin: 0; line-height: 1.5; }
+
+/* Customization Section */
+.custom-section-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
+.custom-card { background-color: var(--color-surface-raised); border: 1px solid var(--color-line); border-radius: var(--radius); padding: var(--space-3); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.custom-card .icon { font-size: 2rem; margin-bottom: var(--space-2); }
+
+/* CTA Section */
+.cta-section-alt { text-align: center; background: linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.06) 30%, rgba(212, 175, 55, 0.1) 100%); }
+.cta-section-alt h2 { margin: 0 auto var(--space-1); }
+.cta-section-alt .lead { margin: 0 auto 0; max-width: 52ch; }
+
+/* CTA Buttons */
+.cta-buttons { display: flex; align-items: center; justify-content: center; gap: var(--space-3); margin-top: var(--space-4); font-size: 1.4rem; animation-direction: reverse; text-align: center; }
+.cta-pulse { color: var(--color-gold-light); cursor: pointer; }
+.hero-btn { background-color: var(--color-gold); color: var(--color-gold-ink) !important; font-size: 1.4rem; padding: calc(var(--space-2) * 1.5) calc(var(--space-3) * 2); transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3); }
+.hero-btn:hover { transform: scale(1.02); box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5); background-color: var(--color-gold-light); }
+.hero-btn:focus { outline: 3px solid var(--color-gold); outline-offset: 4px; transition-property: outline; box-shadow: none !important; transform: none !important; }
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Specific styling for small upgrade text */
+.product-specs td small { color: var(--color-gold); font-style: italic; }
+
+#custom-section h3 { font-size: 1.25rem; }
+#custom-section .lead { color: var(--color-text-dim); font-size: 0.95rem; }
+
+/* Price text */
+.price span { color: var(--color-gold); font-weight: 600; }
