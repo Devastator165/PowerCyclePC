@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PowerCyclePC — Our three PC tiers: Everyday (S$799), Performance (S$999), and Enthusiast (S$1,099+). Custom RGB and build options available." />
+  <title>Products — PowerCyclePC</title>
+
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">PowerCycle<span>PC</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html" aria-current="page">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Products Hero -->
+    <section class="hero" style="padding-block: var(--space-3); background-color: transparent;">
+      <div class="container">
+        <span class="eyebrow">Our builds</span>
+        <h1>Choose Your Tier</h1>
+        <p class="lead">Three tiers, one workshop — pick your PC based on how you play.</p>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="section">
+      <div class="container">
+        <style>
+          /* Responsive grid layout - side by side on desktop with generous column width, stacked on mobile */
+          #tier-grid { display: grid; gap: var(--space-4); }
+          @media (min-width: 900px) { 
+            #tier-grid { grid-template-columns: repeat(3, 1fr); } 
+          }
+          @media (max-width: 899px) { 
+            #tier-grid { grid-template-columns: 1fr; } 
+          }
+          
+          /* Add padding and rounded corners to each card */
+          #tier-grid .card { padding: var(--space-3); }
+        </style>
+        
+        <div class="products-grid" id="tier-grid">
+          
+          <!-- Tier 1 Card -->
+          <article class="card" style="background-color: var(--color-surface-raised); border: 1px solid var(--color-line); border-radius: var(--radius); overflow: hidden;">
+            <div class="card-header">
+              <h2>
+                Tier 1 · Everyday
+              </h2>
+              <p class="price" style="font-size: clamp(1.5rem, 4vw, 2rem);">S$799</p>
+            </div>
+
+            <!-- Specs -->
+            <table style="width: 100%; border-collapse: collapse; margin-top: var(--space-3);">
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Graphics</th>
+                <td style="padding: var(--space-1) var(--space-2);">RTX 3060 / RTX 2070 Super</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Processor</th>
+                <td style="padding: var(--space-1) var(--space-2);">Ryzen 5 3600 or better</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Memory</th>
+                <td style="padding: var(--space-1) var(--space-2);">16 GB DDR4</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Storage</th>
+                <td style="padding: var(--space-1) var(--space-2);">512 GB NVMe SSD<br><small style="color: var(--color-gold); font-style: italic;">(Upgrade to 1 TB for +S$40)</small></td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Power</th>
+                <td style="padding: var(--space-1) var(--space-2);">650 W</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Wi-Fi</th>
+                <td style="padding: var(--space-1) var(--space-2);">Yes</td>
+              </tr>
+            </table>
+
+            <!-- Gameplay -->
+            <div style="margin-top: var(--space-3);">
+              <ul style="list-style: none; margin-top: var(--space-2); padding-left: 0;">
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">FC 27 / FIFA · <span class="price">1440p · 120+ fps · high</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">Valorant / CS2 / Dota 2 / LoL · <span class="price">1080p · 144+ fps</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">Apex / Fortnite / Overwatch 2 · <span class="price">1080p · 60–100 fps</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">GTA V / Minecraft / Roblox / Genshin · <span class="price">1080p · 60+ fps high</span></li>
+                <li style="padding: var(--space-1) 0;">Heavy AAA (Cyberpunk, Alan Wake 2) · <span class="price">1080p · 60 fps medium</span></li>
+              </ul>
+
+              <p style="margin-top: var(--space-2); color: var(--color-text-dim); font-size: 0.9rem;">Good for: First gaming PC, students, 1440p 60Hz or 1080p high-refresh</p>
+
+              <div style="background-color: rgba(212, 175, 55, 0.1); border-left: 3px solid var(--color-gold); padding: var(--space-2); margin-top: var(--space-3);">
+                <p style="margin: 0; font-size: 0.9rem;">
+                  🔥 Ryzen 3600 is a great budget CPU option that is capable for most games!
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tier 2 Card -->
+          <article class="card" style="background-color: var(--color-surface-raised); border: 1px solid var(--color-gold); border-radius: var(--radius); overflow: hidden;">
+            <div class="card-header">
+              <h2>
+                Tier 2 · Performance
+              </h2>
+              <p class="price" style="font-size: clamp(1.5rem, 4vw, 2rem);">S$999</p>
+            </div>
+
+            <!-- Specs -->
+            <table style="width: 100%; border-collapse: collapse; margin-top: var(--space-3);">
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Graphics</th>
+                <td style="padding: var(--space-1) var(--space-2);">RTX 3070 / RTX 2080 Super</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Processor</th>
+                <td style="padding: var(--space-1) var(--space-2);">Ryzen 5 5600 or better</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Memory</th>
+                <td style="padding: var(--space-1) var(--space-2);">16 GB DDR4</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Storage</th>
+                <td style="padding: var(--space-1) var(--space-2);">512 GB NVMe SSD<br><small style="color: var(--color-gold); font-style: italic;">(Upgrade to 1 TB for +S$40)</small></td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Power</th>
+                <td style="padding: var(--space-1) var(--space-2);">750 W</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Wi-Fi</th>
+                <td style="padding: var(--space-1) var(--space-2);">Yes</td>
+              </tr>
+            </table>
+
+            <!-- Gameplay -->
+            <div style="margin-top: var(--space-3);">
+              <!-- <h3 style="font-size: 1rem; margin-bottom: var(--space-2); color: var(--color-gold);">What this tier can do</h3> -->
+
+              <ul style="list-style: none; margin: 0; padding-left: 0;">
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">FC 27 / FIFA · <span class="price">1440p · 150+ fps · high</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">Valorant / CS2 / Dota 2 / LoL · <span class="price">1440p · 144+ fps</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">Apex / Fortnite / Overwatch 2 · <span class="price">1440p · 100+ fps</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">GTA V / Minecraft / Roblox / Genshin · <span class="price">1440p · 60+ fps high</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">Heavy AAA (Cyberpunk, Alan Wake 2) · <span class="price">1440p · 60 fps high</span></li>
+              </ul>
+
+              <p style="margin-top: var(--space-2); color: var(--color-text-dim); font-size: 0.9rem;">Good for: 1440p monitor, wants it to last</p>
+
+              <div style="background-color: rgba(212, 175, 55, 0.1); border-left: 3px solid var(--color-gold); padding: var(--space-2); margin-top: var(--space-3);">
+                <p style="margin: 0; font-size: 0.9rem;">
+                  💡512 GB is plenty — Windows plus FC 27 is about 140 GB, so there is room for a dozen more games.
+                </p>
+              </div>
+
+            </div>
+
+          </article>
+
+          <!-- Tier 3 Card -->
+          <article class="card" style="background-color: var(--color-surface); border: 2px solid var(--color-gold); border-radius: var(--radius); overflow: hidden;">
+            <div class="card-header">
+              <h2>
+                Tier 3 · Enthusiast
+              </h2>
+              <p class="price" style="font-size: clamp(1.5rem, 4vw, 2rem); color: var(--color-gold);">S$1,099 – 1,199</p>
+            </div>
+
+            <!-- Specs -->
+            <table style="width: 100%; border-collapse: collapse; margin-top: var(--space-3);">
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Graphics</th>
+                <td style="padding: var(--space-1) var(--space-2);">RTX 3080 10 GB</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Processor</th>
+                <td style="padding: var(--space-1) var(--space-2);">Ryzen 7 5700X or better</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Memory</th>
+                <td style="padding: var(--space-1) var(--space-2);">16 GB DDR4</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Storage</th>
+                <td style="padding: var(--space-1) var(--space-2);"><span style="color: var(--color-gold);">1 TB NVme SSD — Included!</span></td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Power</th>
+                <td style="padding: var(--space-1) var(--space-2);">850 W Gold</td>
+              </tr>
+              <tr>
+                <th style="padding: var(--space-1) var(--space-2); text-align: left; color: var(--color-text-dim); font-size: 0.9rem;">Wi-Fi</th>
+                <td style="padding: var(--space-1) var(--space-2);">Yes</td>
+              </tr>
+            </table>
+
+            <!-- Gameplay -->
+            <div style="margin-top: var(--space-3);">
+              <!-- <h3 style="font-size: 1rem; margin-bottom: var(--space-2); color: var(--color-gold);">What this tier runs</h3> -->
+
+              <ul style="list-style: none; margin: 0; padding-left: 0;">
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">FC 27 / FIFA · <span class="price">1440p · 190+ fps · high</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">Valorant / CS2 / Dota 2 / LoL · <span class="price">1440p · 240 fps</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">Apex / Fortnite / Overwatch 2 · <span class="price">1440p · 144+ fps</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">GTA V / Minecraft / Roblox / Genshin · <span class="price">1440p · 100+ fps high</span></li>
+                <li style="padding: var(--space-1) 0; border-bottom: 1px solid var(--color-line);">Heavy AAA (Cyberpunk, Alan Wake 2) · <span class="price">1440p · 60–100 fps high</span></li>
+              </ul>
+
+              <p style="margin-top: var(--space-2); color: var(--color-text-dim); font-size: 0.9rem;">Good for: High-refresh 1440p, streaming</p>
+
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Customization Options -->
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Customization</span>
+        <h2>Further Customization Available</h2>
+        <p class="lead">Every PC can be tailored to your exact needs — tell us what you want!</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-3); margin-top: var(--space-3);">
+          <article style="background-color: var(--color-surface-raised); border: 1px solid var(--color-line); border-radius: var(--radius); padding: var(--space-3);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">🌈</div>
+            <h3 style="margin-top: 0;">RGB Lighting</h3>
+            <p class="lead" style="margin-block-start: var(--space-1);">Custom RGB strips and LED lighting options available for your perfect build!</p>
+          </article>
+
+          <article style="background-color: var(--color-surface-raised); border: 1px solid var(--color-line); border-radius: var(--radius); padding: var(--space-3);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">📦</div>
+            <h3>Casing Options</h3>
+            <p class="lead" style="margin-block-start: var(--space-1);">Choose from a variety of cases — transparent tempered glass, mesh front, compact form factor, or full tower!</p>
+          </article>
+
+          <article style="background-color: var(--color-surface-raised); border: 1px solid var(--color-line); border-radius: var(--radius); padding: var(--space-3);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">💾</div>
+            <h3>Secondary Storage</h3>
+            <p class="lead" style="margin-block-start: var(--space-1);">Add extra NVMe SSDs or HDD/SSD hybrid storage for your media library.</p>
+          </article>
+
+          <article style="background-color: var(--color-surface-raised); border: 1px solid var(--color-line); border-radius: var(--radius); padding: var(--space-3);">
+            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">🔌</div>
+            <h3>Other Custom Needs</h3>
+            <p class="lead" style="margin-block-start: var(--space-1);">Specific GPU sizes, USB-C ports, or any other request — just let us know!</p>
+          </article>
+        </div>
+
+        <style>
+          #custom-section h3 { font-size: 1.25rem; }
+          #custom-section .lead { color: var(--color-text-dim); font-size: 0.95rem; }
+        </style>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt" style="text-align: center; background: linear-gradient(180deg, transparent 0%, rgba(212, 175, 55, 0.06) 30%, rgba(212, 175, 55, 0.1) 100%);">
+      <div class="container">
+        <span class="eyebrow">Get a quote</span>
+        <h2 style="margin: 0 auto var(--space-1);">Ready to build or upgrade?</h2>
+        <p style="margin: 0 auto 0; max-width: 52ch;">Tell us your goals — we'll match you with the right hardware and pricing.</p>
+        
+        <div class="cta-buttons" style="display: flex; align-items: center; justify-content: center; gap: var(--space-3); margin-top: var(--space-4);">
+          <span style="color: var(--color-gold-light); animation: pulse 2s infinite;">&rarr;</span>
+          <a href="contact.html" class="btn hero-btn" style="background-color: var(--color-gold); color: var(--color-gold-ink) !important; font-size: 1.4rem; padding: calc(var(--space-2) * 1.5) calc(var(--space-3) * 2); transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);">Get a Quote!</a>
+          <span style="color: var(--color-gold-light); animation: pulse 2s infinite;">&larr;</span>
+        </div>
+
+        <style>
+          @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+          }
+          .hero-btn:hover { transform: scale(1.02); box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5); background-color: var(--color-gold-light); }
+          .hero-btn:focus { outline: 3px solid var(--color-gold); outline-offset: 4px; }
+        </style>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><span class="brand-footer">PowerCyclePC</span> · &copy; <span id="year"></span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

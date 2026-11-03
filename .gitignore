@@ -23,3 +23,5 @@ out/
 .env
 .env.local
 .env.*.local
+
+context.txt
