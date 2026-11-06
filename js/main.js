@@ -19,4 +19,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Mobile Navigation Toggle / Dropdown
+  const navToggle = document.getElementById("navToggle");
+  const mainNav = document.querySelector(".main-nav");
+  
+  if (navToggle && mainNav) {
+    const arrow = navToggle.querySelector(".nav-arrow");
+    
+    navToggle.addEventListener("click", () => {
+      mainNav.classList.toggle("is-open");
+      
+      // Toggle aria-expanded for accessibility
+      navToggle.setAttribute("aria-expanded", 
+        mainNav.classList.contains("is-open") ? "true" : "false"
+      );
+      
+      // Flip the arrow icon
+      if (arrow) {
+        arrow.style.transform = mainNav.classList.contains("is-open") 
+          ? "rotate(180deg)" 
+          : "rotate(0deg)";
+      }
+    });
+  }
 });

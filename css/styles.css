@@ -52,7 +52,14 @@ body {
 
 h1, h2, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0.01em; }
 
-img { max-width: 100%; display: block; }
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-placeholder__meta { display: none; }
+.img-placeholder__label { display: none; }
 
 /* ---------- Layout ---------- */
 .container { width: 100%; max-width: var(--container-max); margin-inline: auto; padding-inline: var(--space-2); }
@@ -79,6 +86,22 @@ img { max-width: 100%; display: block; }
 .hero-actions { display: flex; gap: var(--space-2); justify-content: center; flex-wrap: wrap; }
 .hero-media { margin-top: var(--space-4); }
 
+/* Hero image - allows overflow on mobile with 100vw */
+.hero-image {
+  max-width: 100%;
+  display: block;
+  margin-left: auto; /* Centers the image by default */
+  margin-right: auto;
+}
+
+@media (max-width: 720px) {
+  .hero-image {
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw); /* Push left beyond container padding */
+    margin-right: calc(50% - 50vw); /* Push right beyond container padding */
+  }
+}
+
 
 .cta { text-align: center; }
 .cta h2 { margin: 0 0 var(--space-2); }
@@ -97,13 +120,56 @@ h3 {margin-top: 0; } .card .price { margin-top: var(--space-2); }
 
 /* ---------- Header & Navigation ---------- */
 .site-header { position: sticky; top: 0; z-index: 100; background-color: var(--color-bg); border-block-end: 1px solid var(--color-line); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; transition: all 0.3s ease; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; transition: all 0.3s ease; gap: var(--space-2); }
 .brand { display: inline-flex; align-items: center; font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--color-text); text-decoration: none; white-space: nowrap; letter-spacing: -0.02em; }
 .brand span { color: var(--color-gold); }
+
+/* Mobile Hamburger Menu */
+.nav-toggle { display: none; position: relative; background: transparent; border: none; cursor: pointer; padding: var(--space-1); flex-shrink: 0; }
+.nav-toggle button { width: 44px; height: 32px; background: transparent; border: 1px solid var(--color-line); border-radius: 6px; display: flex; align-items: center; justify-content: center; padding: 0; overflow: hidden; }
+.nav-arrow { width: 18px; height: auto; display: block; transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
+
 .main-nav { display: flex; gap: var(--space-1); }
 .main-nav a, .main-nav a:hover, .main-nav a[aria-current="page"], .main-nav a[aria-current="page"]:hover { padding: var(--space-1) var(--space-3); color: var(--color-text-dim); text-decoration: none; transition: all 0.2s ease; border-radius: 8px; font-size: 0.95rem; font-family: var(--font-sans); display: inline-block; }
 .main-nav a:hover { color: var(--color-gold); background-color: rgba(212, 175, 55, 0.08); }
 .main-nav a[aria-current="page"], .main-nav a[aria-current="page"]:hover { color: var(--color-gold); background-color: rgba(212, 175, 55, 0.16); font-weight: 500; }
+
+/* Responsive Navigation - Dropdown on Mobile */
+@media (max-width: 768px) {
+  .nav-toggle { display: inline-flex; }
+  
+  .main-nav { 
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    margin-left: -110px; /* half of min-width to center */
+    transform: translateY(20px);
+    background-color: var(--color-surface-raised);
+    border: 1px solid var(--color-line);
+    border-radius: 12px;
+    min-width: 220px;
+    padding-block: var(--space-3);
+    flex-direction: column;
+    gap: var(--space-1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none; /* Prevent clicks when hidden */
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .main-nav.is-open {
+    opacity: 1;
+    pointer-events: auto; /* Re-enable clicks when visible */
+    transform: translateY(0);
+  }
+  
+  .main-nav a {
+    /* width: calc(100% + var(--space-3) * 2); */
+    text-align: center;
+    padding-inline: var(--space-3);
+  }
+}
 
 .site-footer { padding-block: var(--space-4); text-align: center; color: var(--color-text-dim); font-size: 0.95rem; border-top: 1px solid var(--color-line); }
 
